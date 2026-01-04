@@ -90,9 +90,11 @@ You should see my-first-topic in the list.
 **Step 4: Describe Your Topic (Optional but Useful)**
 See detailed information about your topic:
 
-```./kafka-topics.sh --describe \
+```
+./kafka-topics.sh --describe \
   --bootstrap-server localhost:9092 \
-  --topic my-first-topic```
+  --topic my-first-topic
+```
 
 This shows:
 Partition count (3)
@@ -100,6 +102,11 @@ Replication factor (1)
 Which broker is the leader for each partition
 
 **Step 5:**
+ delete topic
+
+ ```./kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic my-first-topic```
+
+**Step 6:**
 Exit the container:
 
 ```exit```
